@@ -1,0 +1,33 @@
+{
+  "name": "hunting-2d-ranau-2026-pwa",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PWA Rasmi Pertandingan Memanah Hunting 2D Ranau 2026 - Kinabalu Traditional Archery Club Ranau (KTACR)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173"
+  },
+  "dependencies": {
+    "jsqr": "^1.4.0",
+    "lucide-react": "^0.469.0",
+    "lz-string": "^1.5.0",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5",
+    "vite-plugin-pwa": "^0.21.1"
+  }
+}

@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overscroll-behavior-y: contain;
+  }
+}
+
+/* Subtle Sabahan traditional geometric diamond strip (inspired by KTACR logo & poster border) */
+.sabah-motif-bar {
+  background-color: #071733;
+  background-image:
+    linear-gradient(135deg, #dc2626 25%, transparent 25%),
+    linear-gradient(225deg, #dc2626 25%, transparent 25%),
+    linear-gradient(45deg, #fbbf24 25%, transparent 25%),
+    linear-gradient(315deg, #fbbf24 25%, #071733 25%);
+  background-position: 8px 0, 8px 0, 0 0, 0 0;
+  background-size: 16px 16px;
+  background-repeat: repeat-x;
+}
+
+/* Hide scrollbars on horizontal chip strips while preserving smooth touch scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Safe area padding for notched iPhones / Android PWA standalone mode */
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* Official Print Stylesheet (A4 Clean Tournament Results & Patrol Sheets) */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-break-before {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
